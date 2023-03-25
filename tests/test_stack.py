@@ -28,4 +28,4 @@ def test_stack_push():
     assert stack.top.next_node.next_node.next_node == None
 def test_stack_pop():
 
-    assert stack.pop() ==None
+    assert stack.pop() =='data3'
