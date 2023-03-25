@@ -13,17 +13,16 @@ class Node:
 
 class Stack:
     """Класс для стека"""
-    stack_list = []
+
     def __init__(self):
 
         """Конструктор класса Stack"""
         self.top = None
 
-
-
     def push(self, data):
         node = Node(data, self.top)
         self.top = node
+
         """
         Метод для добавления элемента на вершину стека
 
@@ -36,7 +35,14 @@ class Stack:
 
         :return: данные удаленного элемента
         """
-        while len(self.stack_list) > 0:
-            tample = self.stack_list[-1]
-            self.stack_list.pop()
-            return tample
+        node = self.top
+        if not node:
+            return None
+        else:
+            self.top = node.next_node
+            return node.data
+
+    # while len(self.stack_list) > 0:
+    #    tample = self.stack_list[-1]
+    #   self.stack_list.pop()
+    #  return tample
