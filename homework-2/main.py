@@ -5,10 +5,12 @@ if __name__ == '__main__':
     stack.push('data1')
     data = stack.pop()
 
+
     # стэк стал пустой
     assert stack.top is None
 
     # pop() удаляет элемент и возвращает данные удаленного элемента
+
     assert data == 'data1'
 
     stack = Stack()

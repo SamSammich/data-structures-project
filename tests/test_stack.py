@@ -15,7 +15,7 @@ def test_node_init(expl1):
 
 
 def test_stack_init():
-    assert stack.stack_list == []
+    assert stack.top == None
 
 def test_stack_push():
 
@@ -27,5 +27,5 @@ def test_stack_push():
     assert stack.top.next_node.next_node.data == 'data1'
     assert stack.top.next_node.next_node.next_node == None
 def test_stack_pop():
-    stack.stack_list = ['data1', 'data2']
-    assert stack.pop() =='data2'
+
+    assert stack.pop() =='data3'
