@@ -29,3 +29,6 @@ def test_stack_push():
 def test_stack_pop():
 
     assert stack.pop() =='data3'
+
+def test_str():
+    assert stack.__str__() == 'Class Stack'

@@ -46,3 +46,5 @@ class Stack:
     #    tample = self.stack_list[-1]
     #   self.stack_list.pop()
     #  return tample
+    def __str__(self):
+        return 'Class Stack'
