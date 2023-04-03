@@ -10,7 +10,6 @@ class Node:
         self.data = data
         self.next_node = next_node
 
-
 class Queue:
     """Класс для очереди"""
 
@@ -32,7 +31,6 @@ class Queue:
             node = Node(data, next_node=None)
             self.tail.next_node = node
             self.tail = node
-
 
     def dequeue(self):
         """
