@@ -47,4 +47,11 @@ class Queue:
 
     def __str__(self):
         """Магический метод для строкового представления объекта"""
-        return ""
+        if not self.head:  # Если очередь пуста, возвращаем пустую строку
+            return ''
+        node = self.head
+        result = []
+        while node:  # В цикле перебираем очередь
+            result.append(f'{node.data}')
+            node = node.next_node
+        return '\n'.join(result)  # Соединяем данные из списка
