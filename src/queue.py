@@ -10,6 +10,7 @@ class Node:
         self.data = data
         self.next_node = next_node
 
+
 class Queue:
     """Класс для очереди"""
 

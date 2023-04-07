@@ -19,4 +19,9 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(test_queue.dequeue(), 'data1')
         test_queue.dequeue()
         self.assertIsNone(test_queue.dequeue())
-
+    def test_str(self):
+        test_queue = queue.Queue()
+        assert test_queue.__str__() == ''
+        test_queue.enqueue('data1')
+        test_queue.enqueue('data2')
+        assert test_queue.__str__() == 'data1\ndata2'
