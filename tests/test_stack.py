@@ -7,7 +7,9 @@ from src.stack import Node, Stack
 def expl1():
     return Node(5, None)
 
+
 stack = Stack()
+
 
 def test_node_init(expl1):
     assert expl1.data == 5
@@ -17,8 +19,8 @@ def test_node_init(expl1):
 def test_stack_init():
     assert stack.top == None
 
-def test_stack_push():
 
+def test_stack_push():
     stack.push('data1')
     stack.push('data2')
     stack.push('data3')
@@ -26,9 +28,14 @@ def test_stack_push():
     assert stack.top.next_node.data == 'data2'
     assert stack.top.next_node.next_node.data == 'data1'
     assert stack.top.next_node.next_node.next_node == None
-def test_stack_pop():
 
-    assert stack.pop() =='data3'
+
+def test_stack_pop():
+    assert stack.pop() == 'data3'
+    assert stack.pop() == 'data2'
+    assert stack.pop() == 'data1'
+    assert stack.pop() == None
+
 
 def test_str():
     assert stack.__str__() == 'Class Stack'
